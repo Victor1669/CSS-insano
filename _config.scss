@@ -1,0 +1,95 @@
+/*   PROPRIEDADES   */
+@mixin html_fs($fs){
+    font-size: $fs;
+}
+@mixin mgtop($mgtop){
+    margin-top: $mgtop;
+}
+@mixin mgbot($mgbot){
+    margin-bottom: $mgbot;
+}
+@mixin mgright($mgright){
+    margin-right: $mgright;
+}
+@mixin mgleft($mgleft){
+    margin-left: $mgleft;
+}
+@mixin width($width){
+    width: $width;
+}
+@mixin top($top){
+    top: $top;
+}
+@mixin right($right){
+    right: $right;
+}
+@mixin left($left){
+    left: $left;
+}
+@mixin flex_dir($flex_dir){
+    flex-direction: $flex_dir;
+}
+@mixin just_cont($just_cont){
+    justify-content: $just_cont;
+}
+@mixin display($display){
+    display: $display;
+}
+
+
+
+
+
+
+
+
+
+
+@mixin tudo(){
+    @include display(flex);
+    @include flex_dir(column);
+    align-items: center;
+}
+@mixin flex(){
+    display: flex;
+}
+@mixin coluna(){
+    flex-direction: column;    
+}
+@mixin centro(){
+    align-items: center;
+}
+
+
+@mixin body_teto(){
+    @include just_cont(center);
+    @include flex();
+    margin: 0;
+}
+
+@mixin absolute(){
+    position: absolute;
+}
+
+@mixin botao(){
+    transition: 0.25s;
+    background-color: yellow;
+    color: black;
+    border: 5px groove maroon;
+}
+@mixin aparecer(){
+    transition: 0.25s;
+    opacity: 1;
+    display: block;
+}
+
+/*   CLASSES   */
+.sombra{
+    box-shadow: 5px 5px 4px black;
+}
+.noventa{
+    width: 90%;
+} 
+.metade{
+    width: 50%;
+}

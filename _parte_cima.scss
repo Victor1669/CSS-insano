@@ -1,0 +1,58 @@
+@import './config';
+
+/*   PARTE CIMA   */
+@mixin m_link_w($width){
+    width: $width;
+}
+
+#teto{
+    @include flex();
+    @include body_teto();
+    width: 100%;
+    position: fixed;
+    border: 10px groove rgb(172, 170, 170);
+    top: 0;
+    left: 0;
+    background-image: url(../../IMAGENS/quartzo.jpg);
+    box-shadow: 10px 10px 20px black;
+    z-index: 5;
+}
+#subtitulo1{
+    width: 50%;
+    text-align: center;
+    margin-top: 25%;
+}
+#lista{
+    @include absolute;
+    top: 0.2rem;
+    right: -16px;
+    background-image: linear-gradient(red, black, white);
+    text-align: center;
+    width: 120px;
+    &:hover #menu a{
+        @include aparecer();
+    }
+}
+#menu{
+    @include absolute;
+    margin-top: 15%;
+    top: calc(2.3rem - 50%);
+    right: 0;
+    a{
+        @include m_link_w(120px);
+        background-color: green;
+        border: 5px solid black;
+        margin: 10px 20px;
+        margin-top: 0%;
+        box-shadow: 5px 5px 4px black;
+        text-align: center;
+        display: none;
+        &:hover{
+            @include botao();
+            @include aparecer();
+        }
+    } 
+}  
+.parte_cima{
+    @include tudo();
+}

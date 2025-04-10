@@ -1,0 +1,63 @@
+@import './config';
+
+@mixin dicas(){
+    width: fit-content;
+    border: 0.25rem solid blue;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+@mixin grow(){
+    flex-grow: 1;
+}    
+
+/*   PARTE UM   */
+
+#primeiro{
+    @include tudo();
+}
+#escudo1{
+    @include grow();
+    width: 260px;
+    margin: 5%;
+    border: solid white;
+    &:hover{
+        height: auto;
+    }
+}
+#um{
+    @include grow();
+    &:hover{
+        height: auto;
+    }
+}
+#segundo{
+    @include tudo();
+    p{
+        @include grow();                
+    }
+}
+.dica1, .dica2{
+    @include dicas();
+    text-align: center
+}
+.dica1{
+    @include aparecer();
+}
+.dica2{
+    display: none;
+}
+#paragrafo{
+    @include tudo();
+    height: 250px;
+    overflow: hidden;
+    text-align: justify;
+    p{
+        text-indent: 2em;
+    }
+    &:hover{
+        height: auto;
+    }
+}
+.parte_um{
+    @include tudo();
+}

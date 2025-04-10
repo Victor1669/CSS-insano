@@ -1,0 +1,81 @@
+@import './config';
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    @include flex();
+    @include body_teto();
+    background-image: linear-gradient(white,rgb(192,192,192), grey);
+    overflow-x: hidden;
+    flex-direction: column;
+}
+h1, h2{
+    text-shadow: 2px 2px 4px black, 5px 5px 3px black;
+    margin: 3%;
+    color: white;
+}
+h2{
+    font-size: 0.76rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 5px solid red;
+    background-color: rgb(140, 140, 140);
+}
+p, a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p, .noventa_cinco{
+    font-size: 14px;
+    width: 95%;
+}
+li{
+    width: 6.3rem;
+    padding: 5px;
+    border: 5px solid black;
+    margin: 10px;
+    a{
+        margin: 0;
+    }
+    &:hover{
+        @include botao();
+    }
+}
+ul{
+    @include absolute();
+    list-style-type: none;
+    margin: 0 1%;
+    top: 2.3rem;
+    right: 0;
+}
+a{
+    color: white;
+    padding: 0.5rem 0.33rem;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 11px;
+}
+nav{
+    margin: 30px;
+    a{
+        background-color: green;
+        border: 5px groove blue;
+        padding: 20px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 4px black;
+        &:hover{
+            @include botao();
+        }
+    }
+}
+hr{
+    width: 100%;
+    height: 0;
+    background-color: black;
+}
+footer{
+    margin-bottom: 7rem;
+}

@@ -1,0 +1,184 @@
+@import './config';
+@import './tags';
+@import './parte_cima';
+@import './parte_um';
+@import './parte_img';
+
+/*   TAGS   */
+@mixin sub1($html_fs, $mgtop, $width){
+    @include html_fs($html_fs);
+    @include mgtop($mgtop);
+    @include width($width)
+}
+@mixin first(){
+    @include flex_dir(row);
+    @include flex();
+    @include just_cont(center);
+    @include centro();
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px){
+    html{
+        /*   1 REM   */
+        @include html_fs(16px);
+    }
+    #subtitulo1{
+        @include mgtop(22%);
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 425px){
+    html{
+        /*   1 REM   */
+        @include html_fs(19.5px);
+    }
+    #subtitulo1{
+        @include mgtop(20%);
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 600px){
+    html{
+        /*   1 REM   */
+        @include html_fs(22px);
+    }
+    #subtitulo1{
+        @include sub1(0.64rem,20%, 120px);
+    }    
+    
+    /*   NOVO   */
+    
+    h1{
+        @include html_fs(1rem);
+    }
+    li a{
+        @include html_fs(0.75rem);   
+    }
+    footer{
+        @include mgbot(5rem);
+    }
+    #lista{
+        @include top(0.5rem);
+    }
+
+    #menu{
+        @include right(1rem);
+        a{
+            @include width(6.75rem);
+        }
+    }
+    #lista{
+        @include width(6.75rem);
+    }
+    .dica1, .dica2{
+        @include html_fs(0.6rem); 
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    html{
+        /*   1 REM   */
+        @include html_fs(25px);    
+    }
+    h1{
+        @include html_fs(1.2rem);    
+    }
+    li a{
+        @include html_fs(0.75rem);     
+    }
+    footer{
+        @include mgbot(5rem);
+    }
+    #subtitulo1{
+        @include sub1(1rem,18%, fit-content);
+    }
+    #menu{
+        @include right(1rem);
+        a{
+            @include width(6.75rem);
+        }
+    }
+    #lista{
+        @include top(1.1rem);
+        @include width(6.75rem);
+    }
+    .dica1, .dica2{
+        @include html_fs(1rem); 
+    }
+
+    /*   NOVO   */
+
+    #escudo1{
+        @include mgright(2.5%);
+    }
+    #escudo1, #um{
+        @include width(45%);
+    }
+    #paragrafo{
+        @include flex_dir(column);
+    }
+    #primeiro{
+        @include first();
+    }
+    #segundo{
+        @include centro();
+    }
+}
+/* DESKTOP */
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    html{
+        /*   1 REM   */
+        @include html_fs(25px);    
+    }
+    h1{
+        @include html_fs(1.5rem);    
+    }
+    li a{
+        @include html_fs(0.75rem);     
+    }
+    footer{
+        @include mgbot(5rem);
+    }
+    #subtitulo1{
+        @include sub1(1.2rem,16%,fit-content);
+    }
+    #menu{
+        @include right(1rem);
+        a{
+            @include width(6.63rem);
+            @include centro();     
+        }
+    }
+    #lista{
+        @include top(2.3rem);
+        @include width(6.63rem);
+    }
+    .dica1, .dica2{
+        @include html_fs(1rem); 
+    }
+    #escudo1{
+        flex-grow: 1;
+    }
+    #um, footer p{
+        @include mgleft(2.5%);
+        @include mgright(2.5%);
+    }  
+    #escudo1, #um{
+        @include width(45%);
+            flex-grow: 1;
+    }  
+    #paragrafo{
+        @include flex_dir(column);
+    }
+    #primeiro, #segundo, footer p{
+        @include width(90%);
+    }
+    #primeiro{
+        @include first();
+    }
+    #segundo, footer p{
+        @include centro();
+    }
+
+    /*   NOVO   */
+    #pilar1, #pilar2{
+        @include width(block);
+    }
+}

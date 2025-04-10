@@ -1,0 +1,62 @@
+@import './config';
+
+/*   PARTE IMG   */
+#container{
+    @include centro();
+    @include flex();
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background-image: radial-gradient(orange, gold, yellow, white);
+    margin: 25px;
+    justify-content: center;
+    &:hover{
+        background-image: radial-gradient(red, brown, maroon, black);
+    }
+}
+#escudo2{
+    position: relative;
+    width: 75%;
+    margin-top: 1rem;
+}    
+/*   IMAGENS FIXAS   */
+#link{
+    width: 0;
+}
+#zap{
+    z-index: 2;
+    background-color: rgb(10, 154, 10);
+    padding: 0.25rem;
+    border: 0.2rem solid rgba(255, 0, 0, 0.605);
+    border-radius: 0.625rem;
+    width: 3rem;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    opacity: 60%;
+    position: fixed;
+    &:hover{
+        transition: 1s;
+        border: 5px solid rgba(255, 0, 0);
+        opacity: 1;
+    }
+}
+#pilar1, #pilar2{
+    display: none;
+    position: fixed;
+    width: 20%;
+    z-index: 0;
+    height: 95%;
+    bottom: 0;
+}
+#pilar1{
+    left: -3%;
+}
+#pilar2{
+    right: -3%;
+}
+.parte_img{
+    @include tudo();
+}
+.parte_final{
+    @include tudo();
+}
